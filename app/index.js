@@ -1,21 +1,24 @@
-const http = require('http');
-const url = require('url');
+// load express framework
+const express = require('express');
 
-const port = 3000;
+// load configuration and setup
+const config = require('../config.json');
+const port = config.port;
 
-http.createServer((request, response) => {
+// create an app via express
+const app = express();
 
+// setup route handling
+app.get('/:id', function (request, response) {
   console.log('Incoming request to url: ', request.url);
-  console.log('Method', request.method);
 
-  var queryData = url.parse(request.url, true).query;
-  console.log('query parameters: ', queryData);
+  const payload = {"person": request.params.id};
 
   response.statusCode = 200;
-  res.send('Hello from wsgen');
-  response.end();
+  response.end(JSON.stringify(payload));
+});
 
-}).listen(port);
-
-console.log('listening on port', port);
-
+// launch a http server listening on the specified port
+app.listen(port, function () {
+  console.log('listening on port:', port);
+});
