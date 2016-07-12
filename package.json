@@ -1,0 +1,26 @@
+{
+  "name": "wsgen",
+  "version": "0.1.0",
+  "description": "Backend for a conversational website generator.",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorjanz/wsgen.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "cms",
+    "generator"
+  ],
+  "author": "gorjanz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gorjanz/wsgen/issues"
+  },
+  "homepage": "https://github.com/gorjanz/wsgen#readme"
+}
