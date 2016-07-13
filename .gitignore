@@ -33,3 +33,6 @@ jspm_packages
 # Intellij
 .idea
 wsgen.iml
+
+# Example / Test data
+example-data/

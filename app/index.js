@@ -11,7 +11,7 @@ const app = express();
 app.get('/', function (request, response) {
   console.log('Incoming request to url: ', request.url);
 
-  const payload = "Hello World";
+  const payload = "The website is under construction, and will be available shortly... :)";
 
   response.statusCode = 200;
   response.end(payload);
