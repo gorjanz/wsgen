@@ -3,10 +3,19 @@ const express = require('express');
 
 // load configuration and setup
 const config = require('../config.json');
-const port = config.port;
+const port = process.env.PORT || config.port;
 
 // create an app via express
 const app = express();
+
+app.get('/', function (request, response) {
+  console.log('Incoming request to url: ', request.url);
+
+  const payload = "Hello World";
+
+  response.statusCode = 200;
+  response.end(payload);
+});
 
 // setup route handling
 app.get('/:id', function (request, response) {
