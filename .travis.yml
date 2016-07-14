@@ -7,4 +7,4 @@ branches:
 install:
   - npm install
 
-#script: node app/index.js
+script: echo "Build well done"
