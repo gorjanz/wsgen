@@ -1,0 +1,10 @@
+language: node_js
+node_js: "6.3"
+
+branches:
+  only: master
+
+install:
+  - npm install
+
+script: node app/index.js
